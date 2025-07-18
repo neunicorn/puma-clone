@@ -1,8 +1,6 @@
 import ListNav from "@/components/atom/ListNav";
 import Image from "next/image";
-import Puma from "@/assets/images/puma.svg";
 import PumaWhite from "@/assets/images/puma_white.svg";
-import { ShoppingCartSimpleIcon } from "@phosphor-icons/react";
 import Link from "next/link";
 import InputSearch from "./InputSearch";
 import UserAction from "./UserAction";
