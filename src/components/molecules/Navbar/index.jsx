@@ -5,6 +5,7 @@ import PumaWhite from "@/assets/images/puma_white.svg";
 import { ShoppingCartSimpleIcon } from "@phosphor-icons/react";
 import Link from "next/link";
 import InputSearch from "./InputSearch";
+import UserAction from "./UserAction";
 
 const Navbar = () => {
   return (
@@ -16,7 +17,7 @@ const Navbar = () => {
             <Image src={PumaWhite} alt="Puma Logo" width={39} height={39} />
           </Link>
           <nav className="h-full">
-            <ul className="flex h-full items-center">
+            <ul className="group flex h-full items-center">
               <ListNav href={"/"} content={"Produk Terbaru"} />
               <ListNav href={"/"} content={"Wanita"} />
               <ListNav href={"/"} content={"Pria"} />
@@ -41,16 +42,7 @@ const Navbar = () => {
               <path d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,160H40V56H216V200ZM176,88a48,48,0,0,1-96,0,8,8,0,0,1,16,0,32,32,0,0,0,64,0,8,8,0,0,1,16,0Z"></path>
             </svg>
           </button>
-          <button className="group flex items-center px-4 transition-colors duration-300 h-full">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-7 h-7 text-black group-hover:fill-[#CCCCCC] transition-colors duration-300"
-              fill="#fff"
-              viewBox="0 0 256 256"
-            >
-              <path d="M152,80a8,8,0,0,1,8-8h88a8,8,0,0,1,0,16H160A8,8,0,0,1,152,80Zm96,40H160a8,8,0,0,0,0,16h88a8,8,0,0,0,0-16Zm0,48H184a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16Zm-96.25,22a8,8,0,0,1-5.76,9.74,7.55,7.55,0,0,1-2,.26,8,8,0,0,1-7.75-6c-6.16-23.94-30.34-42-56.25-42s-50.09,18.05-56.25,42a8,8,0,0,1-15.5-4c5.59-21.71,21.84-39.29,42.46-48a48,48,0,1,1,58.58,0C129.91,150.71,146.16,168.29,151.75,190ZM80,136a32,32,0,1,0-32-32A32,32,0,0,0,80,136Z"></path>
-            </svg>
-          </button>
+          <UserAction />
         </div>
       </div>
     </header>
