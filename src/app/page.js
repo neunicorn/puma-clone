@@ -12,6 +12,7 @@ export default function Home() {
         content={"ENDING IN"}
         button={"SHOP NOW"}
         alignment={"justify-center text-center"}
+        content_color={"black"}
       />
     </div>
   );

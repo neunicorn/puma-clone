@@ -10,6 +10,7 @@ const Banner = ({
   content,
   button,
   content_absolute,
+  content_color,
 }) => {
   const absolute = content_absolute
     ? "absolute top:0 right:0 left:0 bottom:0"
@@ -32,6 +33,7 @@ const Banner = ({
             title={title}
             content={content}
             button={button}
+            color={content_color}
           />
         </div>
         {/* ) : null} */}
