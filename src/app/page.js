@@ -13,6 +13,7 @@ export default function Home() {
         button={"SHOP NOW"}
         alignment={"justify-center text-center"}
         content_color={"black"}
+        timer_in_second={3600}
       />
     </div>
   );

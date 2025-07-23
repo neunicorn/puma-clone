@@ -11,6 +11,11 @@ const Card = (props) => {
               {discount_discount_persentage} % OFF
             </span>
           ) : null}
+          {product_status ? (
+            <span className="absolute border-l-1 border-l-black py-[3px] px-[9px] font-normal text-xs left-0 -bottom-[1px] text-black uppercase">
+              {product_status}
+            </span>
+          ) : null}
         </div>
         <div className="flex p-[10px] justify-between text-base leading-6">
           <div className="text-[#181818] pr-[10px] font-bold">

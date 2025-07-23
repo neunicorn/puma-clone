@@ -11,4 +11,4 @@ const VideoPlayer = ({ src }) => {
   );
 };
 
-export default VideoPlaye;
+export default VideoPlayer;
