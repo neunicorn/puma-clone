@@ -1,38 +1,38 @@
 import Image from "next/image";
 
-const Card = (props) => {
+const Card = ({ product }) => {
   return (
     <div className="mx-1 cursor-pointer">
-      <Link href={`/${product_name}`}>
+      <Link href={`/${product.name}`}>
         <div className="relative w-[340px] h-[340px]">
-          <Image src={product_image_src} className="w-full h-full" />
-          {product_discount ? (
+          <Image src={product.image} className="w-full h-full" />
+          {product.discount ? (
             <span className="absolute text-xs text-white bg-[#ba2026] w-11 h-3 -left-1 top-4 shadow">
-              {discount_discount_persentage} % OFF
+              {product.discount_persentage} % OFF
             </span>
           ) : null}
-          {product_status ? (
+          {product.status ? (
             <span className="absolute border-l-1 border-l-black py-[3px] px-[9px] font-normal text-xs left-0 -bottom-[1px] text-black uppercase">
-              {product_status}
+              {product.status}
             </span>
           ) : null}
         </div>
         <div className="flex p-[10px] justify-between text-base leading-6">
           <div className="text-[#181818] pr-[10px] font-bold">
-            {product_name}
+            {product.name}
           </div>
           <div className="flex flex-col text-right">
-            {product_discount ? (
+            {product.discount ? (
               <>
                 <div className="text-[#ba2026] font-bold">
-                  {product_price_discount}
+                  {product.price.discount}
                 </div>
                 <div className="text-[#666] font-normal line-through">
-                  {product_price}
+                  {product.price}
                 </div>
               </>
             ) : (
-              <div className="text-[#181818] font-bold">{product_price}</div>
+              <div className="text-[#181818] font-bold">{product.price}</div>
             )}
           </div>
         </div>

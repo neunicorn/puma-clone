@@ -1,7 +1,7 @@
 "use client";
 
 import { formatTime } from "@/lib/helper/timer";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Timer = ({ initialTimerInSecond, onTimerEnd, color }) => {
   const [secondRemaining, setSecondRemainng] = useState(initialTimerInSecond);
@@ -41,7 +41,9 @@ const Timer = ({ initialTimerInSecond, onTimerEnd, color }) => {
           DAYS
         </span>
       </span>
-      <span>:</span>
+      <span className="text-center mx-[5px] font-bold text-[2rem] tracking-[0.1rem] leading-[2rem]">
+        :
+      </span>
       <span className="text-[2.5rem] tracking-[0.3125rem] leading-9">
         <span>{formattedTime.formattedHours.charAt(0)}</span>
         <span>{formattedTime.formattedHours.charAt(1)}</span>
@@ -49,7 +51,9 @@ const Timer = ({ initialTimerInSecond, onTimerEnd, color }) => {
           HRS
         </span>
       </span>
-      <span>:</span>
+      <span className="text-center mx-[5px] font-bold text-[2rem] tracking-[0.1rem] leading-[2rem]">
+        :
+      </span>
       <span className="text-[2.5rem] tracking-[0.3125rem] leading-9">
         <span>{formattedTime.formattedMinutes.charAt(0)}</span>
         <span>{formattedTime.formattedMinutes.charAt(1)}</span>
@@ -57,7 +61,9 @@ const Timer = ({ initialTimerInSecond, onTimerEnd, color }) => {
           MINS
         </span>
       </span>
-      <span>:</span>
+      <span className="text-center mx-[5px] font-bold text-[2rem] tracking-[0.1rem] leading-[2rem]">
+        :
+      </span>
       <span className="text-[2.5rem] tracking-[0.3125rem] leading-9">
         <span>{formattedTime.formattedSeconds.charAt(0)}</span>
         <span>{formattedTime.formattedSeconds.charAt(1)}</span>

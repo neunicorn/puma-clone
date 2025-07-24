@@ -1,0 +1,87 @@
+{
+    "status" : true,
+    "code" : 200,
+    "msg" : "Data Fetched",
+    "data": [{
+        "id": 1,
+        "product" : {
+            "name" :"Sepatu Sneaker Scuderia Ferrari HP Speedcat Unisex",
+            "price": "1.799.000",
+            "image" : "/images/product1/sepatu1.avif"
+        }
+
+    },
+    {
+        "id" : 2,
+        "product" : {
+            "name" : "Sepatu Sneaker Scuderia Ferrari HP Speedcat Wanita",
+            "price" : "1.799.000",
+            "image" : "/images/product1/sepatu2.avif"
+        }
+    },
+    {
+        "id" : 3,
+        "product" : {
+            "name" : "Speedcat Leather Sneakers Unisex",
+            "price" : "1.999.000",
+            "image" : "/images/product1/sepatu3.avif"
+        }
+    },
+    {
+        "id" : 4,
+        "product" : {
+            "name" : "Speedcat Leather Sneakers Unisex",
+            "price" : "1.999.000",
+            "image" : "/images/product1/sepatu4.avif"
+        }
+    },
+    {
+        "id": 5,
+        "product": {
+            "name" :"Sepatu Sneaker Speedcat Wine Club Wanita",
+            "price": "1.899.000",
+            "image" : "/images/product1/sepatu5.avif"
+        }
+    },
+    {
+        "id" : 6,
+        "product":{
+            "name":"Sepatu Speedcat OG Unisex Sneakers",
+            "price": "1.899.000",
+            "image": "/images/product1/sepatu6.avif"
+        }
+    },
+    {
+        "id" : 7,
+        "product":{
+            "name":"Sepatu Suede Speedcat Ballet Wanita",
+            "price": "1.299.000",
+            "image": "/images/product1/sepatu7.avif"
+        }
+    },
+    {
+        "id" : 8,
+        "product":{
+            "name":"Sepatu Suede Speedcat Ballet Wanita",
+            "price": "1.299.000",
+            "image": "/images/product1/sepatu8.avif"
+        }
+    },
+    {
+        "id" : 9,
+        "product":{
+            "name":"Sepatu Sneaker Scuderia Ferrari HP Speedcat Unisex",
+            "price": "1.799.000",
+            "image": "/images/product1/sepatu9.avif"
+        }
+    },
+    {
+        "id" : 10,
+        "product":{
+            "name":"Sepatu Sneaker Scuderia Ferrari HP Speedcat Wanita",
+            "price": "1.799.000",
+            "image": "/images/product1/sepatu10.avif"
+        }
+    }
+]
+}

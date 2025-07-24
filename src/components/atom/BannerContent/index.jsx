@@ -22,7 +22,7 @@ const BannerContent = ({
       <div className={`mt-4`}>
         <Link
           href={href}
-          className={`text-xl font-bold p-4 mt-4  ${warnaBackground} ${warnaTextLink}`}
+          className={`text-base font-bold p-4 mt-4  ${warnaBackground} ${warnaTextLink}`}
         >
           {button}
         </Link>

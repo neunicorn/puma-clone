@@ -11,6 +11,7 @@ const Banner = ({
   button,
   content_absolute,
   content_color,
+  timer_in_second = 3600,
 }) => {
   const absolute = content_absolute
     ? "absolute top:0 right:0 left:0 bottom:0"
@@ -22,7 +23,12 @@ const Banner = ({
         {/* media */}
         <div className="w-full h-116">
           <Link href={href} className="h-full">
-            <Image src={src_image} alt="Banner" sizes="100vw" height={464} />
+            <Image
+              src={src_image}
+              alt="Banner"
+              height={464}
+              className="w-full"
+            />
           </Link>
         </div>
         {/* content */}
@@ -34,6 +40,7 @@ const Banner = ({
             content={content}
             button={button}
             color={content_color}
+            timerInSecond={timer_in_second}
           />
         </div>
         {/* ) : null} */}
