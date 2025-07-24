@@ -1,23 +1,30 @@
 "use client";
 import Banner from "@/components/molecules/Banner";
 import Banner1 from "@/assets/images/banner_1.avif";
+import RoseBanner from "@/assets/images/rose.avif";
 import { getProduct } from "@/lib/api/product";
 import { useEffect, useState } from "react";
 import Carousel from "@/components/molecules/Carousel";
 
 export default function Home() {
-  let [products, setProducts] = useState([]);
+  const [products, setProducts] = useState([
+    {
+      id: 1,
+      product: {
+        name: "Sepatu Sneaker Scuderia Ferrari HP Speedcat Unisex",
+        price: "1.799.000",
+        image: "/images/product1/sepatu1.avif",
+      },
+    },
+  ]);
 
   useEffect(() => {
     const productList = async () => {
       const response = await getProduct();
       const body = await response.json();
-      console.log(body);
 
-      setProducts([products, ...body.data]);
-      console.log(products);
+      setProducts(body.data);
     };
-
     productList();
   }, []);
   return (
@@ -34,6 +41,16 @@ export default function Home() {
         timer_in_second={3600}
       />
       <Carousel data={products} />
+      <Banner
+        src_image={RoseBanner}
+        content_absolute={true}
+        href={"/rose"}
+        title={"SPEED CAT"}
+        content={"FULL THROTTLE FASHION"}
+        button={"BELANJA SEKARANG"}
+        alignment={"flex-col justify-center items-center text-center"}
+        content_color={"white"}
+      />
     </div>
   );
 }

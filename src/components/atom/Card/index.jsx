@@ -1,11 +1,19 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Card = ({ product }) => {
+  const { name, image, price } = product;
   return (
     <div className="mx-1 cursor-pointer">
       <Link href={`/${product.name}`}>
         <div className="relative w-[340px] h-[340px]">
-          <Image src={product.image} className="w-full h-full" />
+          <Image
+            src={image}
+            className="w-full h-full"
+            alt={"product"}
+            width={340}
+            height={340}
+          />
           {product.discount ? (
             <span className="absolute text-xs text-white bg-[#ba2026] w-11 h-3 -left-1 top-4 shadow">
               {product.discount_persentage} % OFF
@@ -18,9 +26,7 @@ const Card = ({ product }) => {
           ) : null}
         </div>
         <div className="flex p-[10px] justify-between text-base leading-6">
-          <div className="text-[#181818] pr-[10px] font-bold">
-            {product.name}
-          </div>
+          <div className="text-[#181818] pr-[10px] font-bold">{name}</div>
           <div className="flex flex-col text-right">
             {product.discount ? (
               <>
@@ -32,7 +38,7 @@ const Card = ({ product }) => {
                 </div>
               </>
             ) : (
-              <div className="text-[#181818] font-bold">{product.price}</div>
+              <div className="text-[#181818] font-bold">{price}</div>
             )}
           </div>
         </div>

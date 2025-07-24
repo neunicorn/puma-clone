@@ -14,7 +14,7 @@ const Banner = ({
   timer_in_second = 3600,
 }) => {
   const absolute = content_absolute
-    ? "absolute top:0 right:0 left:0 bottom:0"
+    ? "absolute top-0 right-0 left-0 bottom-0"
     : "block";
 
   return (
@@ -33,7 +33,7 @@ const Banner = ({
         </div>
         {/* content */}
         {/* {alignment ? ( */}
-        <div className={`flex flex-nowrap  ${alignment}`}>
+        <div className={`${absolute} flex flex-nowrap  ${alignment}`}>
           <BannerContent
             href={href}
             title={title}

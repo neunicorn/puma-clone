@@ -13,7 +13,7 @@ const BannerContent = ({
   const warnaText = color === "white" ? "text-white" : "text-[#181818]";
   const warnaTextLink = color === "white" ? "text-[#181818]" : "text-white";
   return (
-    <div className={`w-1/2 px-24 py-8 h-full`}>
+    <div className={`w-1/2 px-24 py-8`}>
       <h1 className={`font-bold text-2xl  ${warnaText}`}>{title}</h1>
       <p className={`text-xl  ${warnaText}`}>{content}</p>
       {timerInSecond ? (
