@@ -1,10 +1,12 @@
 import BannerContent from "@/components/atom/BannerContent";
+import VideoPlayer from "@/components/atom/VideoPlayer";
 import Image from "next/image";
 import Link from "next/link";
 
 const Banner = ({
   alignment,
   src_image,
+  src_video,
   href,
   title,
   content,
@@ -23,12 +25,16 @@ const Banner = ({
         {/* media */}
         <div className="w-full h-116">
           <Link href={href} className="h-full">
-            <Image
-              src={src_image}
-              alt="Banner"
-              height={464}
-              className="w-full"
-            />
+            {src_image ? (
+              <Image
+                src={src_image}
+                alt="Banner"
+                height={464}
+                className="w-full"
+              />
+            ) : (
+              <VideoPlayer src={src_video} />
+            )}
           </Link>
         </div>
         {/* content */}

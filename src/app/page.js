@@ -5,6 +5,7 @@ import RoseBanner from "@/assets/images/rose.avif";
 import { getProduct } from "@/lib/api/product";
 import { useEffect, useState } from "react";
 import Carousel from "@/components/molecules/Carousel";
+import Header from "@/components/atom/Header";
 
 export default function Home() {
   const [products, setProducts] = useState([
@@ -35,10 +36,20 @@ export default function Home() {
         href={"/next"}
         title={"LAST CALL - END OF SEASON SALE"}
         content={"ENDING IN"}
-        button={"SHOP NOW"}
+        button={"BELANJA SEKARANG"}
         alignment={"justify-center text-center"}
         content_color={"black"}
         timer_in_second={3600}
+      />
+      <Banner
+        src_video={"/video/rose.webm"}
+        content_absolute={false}
+        href={"/rose"}
+        title={"SPEED CAT"}
+        content={"FULL THROTTLE FASHION"}
+        button={"BELANJA SEKARANG"}
+        alignment={"justify-center text-center"}
+        content_color={"black"}
       />
       <Carousel data={products} />
       <Banner
@@ -51,6 +62,7 @@ export default function Home() {
         alignment={"flex-col justify-center items-center text-center"}
         content_color={"white"}
       />
+      <Header txt={"STYLE IT WITH SPEEDCAT"} />
     </div>
   );
 }
